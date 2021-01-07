@@ -1,2 +1,5 @@
 # python-BML
-Biological Machine Learning in Python
+
+Machine learning for biology in Python
+
+License: CC-BY 4.0
