@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Machine learning for biology with Python'
-copyright = '2021, Keisuke Sehara <keisuke.sehara@gmail.com>'
+copyright = '2021, Keisuke Sehara CC-BY 4.0'
 author = 'Keisuke Sehara <keisuke.sehara@gmail.com>'
 
 # The full version, including alpha/beta/rc tags
@@ -27,10 +27,13 @@ release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 
+master_doc = 'index'
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx_rtd_theme"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -41,7 +44,7 @@ templates_path = ['_templates']
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'ja_jp'
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -54,7 +57,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
