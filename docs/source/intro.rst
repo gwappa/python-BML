@@ -1,7 +1,7 @@
-Intro: shell environment
-=========================
+Intro: the terminal emulator
+=============================
 
-Before starting to program: in many cases, you cannot avoid using your **terminal emulator**.
+Before starting to program: you probably cannot avoid using your **terminal emulator**.
 It may sound awful, but it can in reality simplify your life as a programmer in many ways.
 
 Just don't worry, and let's start familiarizing yourself!
@@ -11,9 +11,61 @@ What is the terminal emulator?
 
 A terminal emulator, or just a "terminal" in short, is a character-based environment to interact with your computer.
 
+Terminal? Shell?
+^^^^^^^^^^^^^^^^^
+
+The terminal-emulator application is sometimes also referred to as a **shell**.
+Despite a slight difference in their meanings, the two words -- "shell" and "terminal" --  are interchangeable to each other in many cases.
+For example, "type ... into your terminal" and "type ... into your shell" are both intended for the same action.
+
+The term "shell" is contrasted to the term **kernel**, which refers to the core functionality of the operating system, i.e. Windows, Linux, or Darwin (the core of Mac OS).
+
+Conceptually, shell is "something that wraps around the kernel"; whereas the kernel *is* the program that makes a computer work as a computer, the shell refers to the program that receives a set of commands to let the user touch the kernel functionality.
+
+To be precise, there is a slight difference in what a "shell" means and what a "terminal" means (and sometimes this difference matters in fact):
+
++ The "terminal" refers to the character-based environment where you can talk to your operating system directly (see the `historical background <history>`_ section for more details).
++ The "shell" refers to the program that runs in the terminal.
+
+The reality is that there are several different types of "shell programs" that can run in the terminal: TC shell (``tsch``), Bourne-again shell (``bash``), and the Command Prompt on Windows (``cmd.exe``), to name a few. each of which having a *slightly* different flavor in its set of commands when interacting with the operating system. Although they look and work in quite the same way in most cases, you still need to watch out a certain shell-specific behaviors (which I try to be explicit)...
+
 Where are they?
 ^^^^^^^^^^^^^^^^
 
+Windows 10
+~~~~~~~~~~~
+
+I would recommend using the **Command Prompt** application (since it is used for Anaconda Prompt, too). It is installed on any Windows 10 computer.
+
+* Right-click on the Start menu.
+* Find the menu item "Command Prompt (C)", and select it.
+
+It is also possible to find it from the Search bar at the bottom. Type ``cmd``, and it will show the Command Prompt app for you.
+
+.. note::
+
+	When you open it, you will find that the icon of the Command Prompt app shows up on the task bar. You can right-click on it, and select "Pin to taskbar" so that you don't have to look for the app again next time.
+
+Beware of the fact that, by default, a prompt will open at your home directory.
+
+Mac
+~~~~
+
+The **Terminal** application is installed by default.
+
+* Open Spotlight (click on the magnifying-glass icon, or type Cmd+Space on Finder).
+* Type ``terminal``. Spotlight will then suggest ``Terminal.app``, so hit the enter/return key.
+
+.. note::
+
+	When you open it, the icon of the Terminal app will show up in the Dock. You can keep the icon even after closing the app by dragging the icon to another place in the Dock so that you don't have to look for it again next time.
+
+Linux
+~~~~~~
+
+The **terminal emulator** is installed by default, but the way to open it depends on the distribution you use. Please Google it...
+
+.. _history:
 
 A historical background of "terminals"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,22 +100,40 @@ So here I list a couple of commands that are essential when
 managing files from the terminal.
 
 ``cd``
-~~~~~~
+^^^^^^^
 
 ``ls``
-~~~~~~
+^^^^^^^
 
 ``mkdir``
-~~~~~~~~~
+^^^^^^^^^^
 
 ``mv``
-~~~~~~
+^^^^^^
 
 ``cp``
-~~~~~~
+^^^^^^
 
 ``rm``
-~~~~~~
+^^^^^^
 
-How to open files in GUI?
---------------------------
+Special paths
+--------------
+
+``.``
+^^^^^^
+
+``..``
+^^^^^^
+
+How to open files in GUI from the terminal?
+--------------------------------------------
+
+Especially when editing files or just to take a look at files, it is sometimes preferrable to open the directory (or a file) from the GUI.
+
+In such cases, you don't have to navigate the file browser yourself.
+Your terminal provides you with a command to *open a file from the GUI*:
+
++ **Windows**: ``start <file>``
++ **Mac**: ``open <file>``
++ **Linux**: I guess ``xdg-open <file>`` should work in many distributions.
